@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart To-Do App</title>
+
+  <link rel="stylesheet" href="todo.css">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="blur one"></div>
+  <div class="blur two"></div>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <a href="../index.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back
+    </a>
+
+    <h2>Smart To-Do App</h2>
+
+  </nav>
+
+  <!-- MAIN -->
+
+  <div class="container">
+
+    <!-- LEFT -->
+
+    <div class="todo-card">
+
+      <div class="icon-box">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+
+      <h1>Manage Your Tasks</h1>
+
+      <p>
+        Organize your daily work,
+        track productivity, and stay focused.
+      </p>
+
+      <!-- INPUT -->
+
+      <div class="input-area">
+
+        <input
+        type="text"
+        id="taskInput"
+        placeholder="Enter your task...">
+
+        <button onclick="addTask()">
+          Add Task
+        </button>
+
+      </div>
+
+      <!-- FILTERS -->
+
+      <div class="filters">
+
+        <button onclick="filterTasks('all')">
+          All
+        </button>
+
+        <button onclick="filterTasks('completed')">
+          Completed
+        </button>
+
+        <button onclick="filterTasks('pending')">
+          Pending
+        </button>
+
+      </div>
+
+      <!-- PROGRESS -->
+
+      <div class="progress-section">
+
+        <div class="progress-top">
+
+          <span>Task Progress</span>
+
+          <span id="progressText">0%</span>
+
+        </div>
+
+        <div class="progress-bar">
+
+          <div class="progress-fill" id="progressFill"></div>
+
+        </div>
+
+      </div>
+
+      <!-- QUOTE -->
+
+      <div class="quote-box">
+
+        “Success starts with completing small tasks daily.”
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="task-list-card">
+
+      <h2>Your Tasks</h2>
+
+      <ul id="taskList"></ul>
+
+    </div>
+
+  </div>
+
+  <script src="todo.js"></script>
+
+</body>
+</html>

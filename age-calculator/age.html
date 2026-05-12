@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart Age Calculator</title>
+
+  <link rel="stylesheet" href="age.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="blur one"></div>
+  <div class="blur two"></div>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <a href="../index.html" class="back-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back
+    </a>
+
+    <h2>Smart Age Calculator</h2>
+
+  </nav>
+
+  <!-- MAIN -->
+  <div class="container">
+
+    <div class="calculator-card">
+
+      <div class="icon-box">
+        <i class="fa-solid fa-cake-candles"></i>
+      </div>
+
+      <h1>Calculate Your Age</h1>
+
+      <p>
+        Discover your exact age, zodiac sign,
+        birth day, and next birthday countdown.
+      </p>
+
+      <!-- INPUT -->
+      <div class="input-box">
+
+        <label>Select Your Date of Birth</label>
+
+        <input type="date" id="dob">
+
+      </div>
+
+      <!-- BUTTON -->
+      <button onclick="calculateAge()">
+        Calculate Age
+      </button>
+
+    </div>
+
+    <!-- RESULT -->
+    <div class="result-card" id="resultCard">
+
+      <h2>Your Results</h2>
+
+      <div class="result-grid">
+
+        <div class="result-box">
+          <span id="years">0</span>
+          <p>Years</p>
+        </div>
+
+        <div class="result-box">
+          <span id="months">0</span>
+          <p>Months</p>
+        </div>
+
+        <div class="result-box">
+          <span id="days">0</span>
+          <p>Days</p>
+        </div>
+
+      </div>
+
+      <!-- EXTRA INFO -->
+
+      <div class="extra-info">
+
+        <div class="info-item">
+          <i class="fa-solid fa-star"></i>
+          Zodiac:
+          <span id="zodiac">-</span>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          Born On:
+          <span id="bornDay">-</span>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-gift"></i>
+          Next Birthday:
+          <span id="birthday">-</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="age.js"></script>
+
+</body>
+</html>
